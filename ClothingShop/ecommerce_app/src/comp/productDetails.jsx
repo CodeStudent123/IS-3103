@@ -20,6 +20,7 @@ const products = [
     description: "Comfortable cotton t-shirt",
     image: "/assets/shirt3.webp"
   },
+
 ];
 
 export default products;

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './style.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styling/nav.css"; 
 
 const Nav = ({ cartCount }) => {
   return (
@@ -10,10 +10,10 @@ const Nav = ({ cartCount }) => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/product">Products</Link></li>
         <li><Link to="/cart">Cart ({cartCount})</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/order">Order</Link></li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

@@ -1,0 +1,342 @@
+/* Order Summary Cards - Modern gradient design */
+.order-summary {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 auto 2.5rem auto; /* center horizontally + bottom spacing */
+  flex-wrap: wrap;
+  max-width: 1338px;          /* prevent stretching too wide on large screens */
+  padding: 0 20px;            /* spacing inside the container from edges */
+  box-sizing: border-box;      /* ensures padding doesn’t break layout */
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 180px;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.summary-card:hover::before {
+  opacity: 1;
+}
+
+.summary-card:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 8px 25px rgba(245, 87, 108, 0.25);
+}
+
+.summary-card:nth-child(2):hover {
+  box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+}
+
+.total-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.total-card:hover {
+  box-shadow: 0 15px 40px rgba(79, 172, 254, 0.5);
+}
+
+.summary-label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.summary-value {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation: countUp 0.5s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Order Session - Premium card design */
+.order-session {
+  margin: 0 auto 2.5rem auto; /* center horizontally + bottom spacing */
+  max-width: 1300px;          /* optional: prevent it from being too wide */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  background: white;
+  padding: 0; /* remove side padding here */
+}
+
+
+.order-session:hover {
+  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+}
+
+.order-session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.order-session-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.order-date {
+  color: rgba(255,255,255,0.95);
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+/* Size Badge - Vibrant design */
+.size-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.size-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Session Total - Eye-catching design */
+.session-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 3px dashed #667eea;
+}
+
+.total-amount {
+  color: #667eea;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Empty State - Friendly and engaging */
+.empty-order-container {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.empty-order-container p {
+  font-size: 1.3rem;
+  color: #7f5539;
+  font-weight: 600;
+}
+
+.empty-order-subtitle {
+  color: #9d6b53;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Add subtle animation on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-session {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.order-session:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.order-session:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .order-summary {
+    gap: 1rem;
+  }
+  
+  .summary-card {
+    min-width: 140px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .summary-value {
+    font-size: 1.8rem;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .print-btn, .download-btn {
+    width: 100%;
+  }
+}
+/* Order Image Styling */
+.order-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.order-image:hover {
+  transform: scale(1.1);
+}
+
+/* Order Table Styling */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table thead th {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.order-table tbody td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.order-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.order-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #212529;
+}
+
+.price, .quantity, .subtotal {
+  font-weight: 500;
+  color: #495057;
+}
+
+.subtotal {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .order-summary {
+    gap: 1rem;
+  }
+  
+  .summary-card {
+    min-width: 140px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .summary-value {
+    font-size: 1.8rem;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .print-btn, .download-btn {
+    width: 100%;
+  }
+  
+  .order-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .order-table {
+    font-size: 0.9rem;
+  }
+  
+  .order-table thead th,
+  .order-table tbody td {
+    padding: 0.75rem 0.5rem;
+  }
+}
