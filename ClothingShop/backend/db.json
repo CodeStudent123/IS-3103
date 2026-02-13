@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Blue T-Shirt",
+      "price": 250,
+      "description": "Comfortable cotton t-shirt",
+      "images": [
+        "/assets/shirt1.jpg",
+        "/assets/shirt1-2.jpg",
+        "/assets/shirt1-3.jpg"
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "rating": 5,
+          "date": "2024-05-20",
+          "comment": "Great shirt, very comfortable!"
+        },
+        {
+          "id": 2,
+          "rating": 4,
+          "date": "2024-05-22",
+          "comment": "Good quality, but a little small."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "White T-Shirt",
+      "price": 250,
+      "description": "Comfortable cotton t-shirt",
+      "images": [
+        "/assets/shirt2.jpg"
+      ],
+      "reviews": [
+        {
+          "id": 1764682666381,
+          "rating": 5,
+          "comment": "This is a test review."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Grey T-Shirt",
+      "price": 250,
+      "description": "Comfortable cotton t-shirt",
+      "images": [
+        "/assets/shirt3.webp"
+      ],
+      "reviews": []
+    }
+  ],
+  "cart": []
+}
